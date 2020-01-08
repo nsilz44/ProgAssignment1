@@ -24,7 +24,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv('https://raw.githubusercontent.com/nsilz44/ProgAssignment1/master/data.csv')
+    d3.csv('data.csv')
     .then(function(data) {x.domain(d3.extent(data, function(d) { return d.value; })).nice();
     y.domain(data.map(function(d) { return d.name; }));
     
