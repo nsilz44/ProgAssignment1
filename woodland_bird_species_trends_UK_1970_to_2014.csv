@@ -1,18 +1,5 @@
-Title:,"Woodland birds, individual species trends, based on smoothed trend data",,,,,
-Year:,1970-2014,,,,,
-Geography:,UK,,,,,
-Units:,Index  1970=100,,,,,
-Source:,"British Trust for Ornithology (BTO), Royal Society for the Protection of Birds (RSPB)",,,,,
-URL:,https://www.gov.uk/government/statistics/wild-bird-populations-in-england,,,,,
-Copyright:,Copyright of data and/or information presented or attached in this document may not reside solely with this Department.,,,,,
-Nat. Statistic:,Yes,,,,,
-Custodian,"Environment Statistics Service, Department for Environment, Food and Rural Affairs, Area 2A Nobel House, 17 Smith Square, London SW1P 3JR, 08459 33 55 77",,,,,
-Contact:,enviro.statistics@defra.gsi.gov.uk,,,,,
-Release Date:,18/05/2017 revised 29/05/2017,,,,,
-Notes:,Index  (1970=100),,,,,
-Generalists (12),,,,,,
-,Long term change (1970-2014),,,Short term change (2009-2014),,
-Species,Long term percentage change,Annual percentage change,Trend,Short term percentage change,Annual percentage change,Trend
+
+Species,Long term percentage change (1970-2014),Annual percentage change,Trend,Short term percentage change,Annual percentage change,Trend
 Blackbird (Turdus merula),-16,-0.38,no change,-2,-0.36,no change
 Blue Tit (Cyanistes caeruleus),24,0.48,no change,-2,-0.43,no change
 Bullfinch (Pyrrhula pyrrhula),-39,-1.13,no change,12,2.38,weak increase
@@ -25,8 +12,6 @@ Robin (Erithacus rubecula),45,0.86,no change,0,-0.06,no change
 Song Thrush (Turdus philomelos),-53,-1.71,weak decline,-4,-0.88,no change
 Tawny Owl (Strix aluco),-31,-0.83,no change,3,0.64,no change
 Wren (Troglodytes troglodytes),53,0.97,no change,10,1.84,weak increase
-Specialists (25),,,,,,
-,Long term change (1970-2014),,,Short term change (2009-2014),,
 Species,Long term percentage change,Annual percentage change,Trend,Short term percentage change,Annual percentage change,Trend
 Blackcap (Sylvia atricapilla),297,3.18,strong increase,40,6.93,strong increase
 Chiffchaff (Phylloscopus collybita),93,1.51,weak increase,22,4.13,strong increase
