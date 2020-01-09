@@ -24,7 +24,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv('data.csv')
+    d3.csv('woodland_bird_species_trends_UK_1970_to_2014.csv')
     .then(function(data) {x.domain(d3.extent(data, function(d) { return d.value; })).nice();
     y.domain(data.map(function(d) { return d.name; }));
     
