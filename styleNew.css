@@ -1,0 +1,30 @@
+.bar--positive {
+  fill: rgb(60, 0, 255);
+}
+
+.bar--positive:hover {
+    fill: rgb(24, 2, 98)
+}
+
+.bar--negative {
+  fill: rgba(255, 123, 0, 0.966);
+}
+
+.bar--negative:hover{
+    fill: rgba(153, 74, 0, 0.966)
+}
+.axis text {
+  font: 10px sans-serif;
+}
+.text label{
+    font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+  

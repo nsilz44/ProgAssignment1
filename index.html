@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <title>2017 French Presidential Election Results</title>
+        <link href="stylesheet.css" rel="stylesheet" type="text/css">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+        <script src="script.js"></script>
+
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="passive"> 2017 French Presidential Election Results by Departements</a>
+            <a href="./out/index.html">Documentation</a>
+            <a href="https://github.com/atharvat80/D3_Assignment">Github Repository</a>
+        </div> 
+
+        <div class="sidenav">
+            <p style="text-align: center; font-weight: bold;">How to use this visualisation</p><hr>
+            <ul>
+                <li>Choose which round of the election to visualise using the dropdown menu</li>
+                <li>Clicking on a department shows the results</li>
+            </ul>
+            <select id="menu" onchange="selectMap()">
+                <option>Select</option>
+                <option value="1">Round 1</option>
+                <option value="2">Round 2</option>
+            </select>
+            
+            <hr><p style="text-align: center; font-weight: bold;">About</p><hr>
+            <ul>
+                <li>Author: <a href="https://github.com/atharvat80">Atharva Tidke</a></li>
+                <li>Source: <a href="https://bl.ocks.org/miguelrofer/ac1ec983fc8c1d0b8677259e6bb96198">Visualisation</a> by <a href="https://github.com/miguelrofer">Miguel Rofer</a></li>
+                <li>License: <a href="./out/index.html">MIT License</a></li>
+                <li>Election data source: <a href="https://en.wikipedia.org/wiki/2017_French_presidential_election#By_department">Wikipedia</a></li>
+                <li>France shapefile source: <a href="https://geo.nyu.edu/catalog/stanford-fs569ct0668">NYU Spatial Data Repository</a></li>
+            </ul>
+            <hr><p style="text-align: center; font-weight: bold">Results</p><hr>
+            <h3 id="constituency" class="info"></h3>
+            <p id="result" class="info"></p>
+        </div>
+        
+        <div id="map" class="content"></div>
+
+        <script>
+            france = new map();
+
+            function round1 () {
+                france.removePrevious('svg');
+                france.init(
+                    'france_2017/departements.json',
+                    'france_2017/round1.csv',
+                    'france_2017/colours.json',
+                    'map', 'FRA_adm2-1', 'NAME_2', 'departement', 'candidate', 'party'
+                    );
+            }
+
+            function round2 () {
+                france.removePrevious('svg');
+                france.init(
+                    'france_2017/departements.json',
+                    'france_2017/round2.csv',
+                    'france_2017/colours.json',
+                    'map', 'FRA_adm2-1', 'NAME_2', 'departement', 'candidate', 'party'
+                    );
+            }
+
+            function selectMap () {
+                var val = document.getElementById('menu').value;
+                if (val === '1') {
+                    round1();
+                } else if (val === '2') {
+                    round2();
+                } else {
+                    france.removePrevious('svg');
+                }
+            }
+
+            selectMap();
+        </script>
+
+    </body>
+    
+</html>

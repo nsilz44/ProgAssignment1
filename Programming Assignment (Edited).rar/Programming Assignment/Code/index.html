@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+         <!-- chart description -->
+        <p><strong>The graph below shows the average temperature in the UK taken accross a number of years.
+            Using the slider the visualisation will show the average temperature for each month. Mousing over any of the data points will
+            show the exact year and value of the point. </strong></p> 
+
+        <meta charset="utf-8">
+
+        <!-- load d3 library -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+
+        <!-- load d3 css style sheet -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- initialise slider -->
+        <div id="sliderdiv">
+            <div id= "month"><strong><span id="out"> </span></strong></div>
+            <input id="slider" type="range" min="1" max="12" step="1" value="1" class="slider">
+        </div>
+
+        <!-- div where the graph will take place -->
+        <div id="my_dataviz"></div>
+
+        <!-- color scale -->
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+        <!-- load chart's javascript file -->
+        <script type="text/javascript" src="chart.js"></script>
+
+        <!-- initialise chart class -->
+        <script>
+
+            d3.csv("https://raw.githubusercontent.com/GitHub1029384756/Programming-Assignment/master/data.csv", function(data) {
+                const chart = new Chart(data)
+
+                const slider = document.getElementById("slider");
+                const output = document.getElementById("out");
+                output.innerHTML = chart.allGroup[1];
+
+                slider.oninput = function() {
+                output.innerHTML = chart.allGroup[this.value];
+                chart.update(output.innerHTML)
+                }
+        })
+
+        </script>
+    </body>
+</html>
